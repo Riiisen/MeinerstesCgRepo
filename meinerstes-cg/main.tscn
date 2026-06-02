@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c1acsqtkuh6va" path="res://test.glb" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bew1wgelwl6ka" path="res://base.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://db2dxghrpf852" path="res://Charakter_Benjamin_Ruf.glb" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://ntsnf0c1ilk1" path="res://charakter_benjamin_ruf.gd" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,9 +30,16 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.907772, 0, -10.143483)
 
 [node name="base" parent="test" index="2" unique_id=341925061]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 11.258023, 0)
 script = ExtResource("2_0xm2m")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=631204281]
-transform = Transform3D(1, 0, 0, 0, 0.9374097, 0.34822848, 0, -0.34822848, 0.9374097, -17.204367, 7.29488, -4.051071)
+transform = Transform3D(1, 0, 0, 0, 0.9374097, 0.34822848, 0, -0.34822848, 0.9374097, -17.204367, 1.8014593, -4.051071)
+
+[node name="Charakter_Benjamin_Ruf" parent="." unique_id=1297010112 instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.59838, 0.05955577, -6.7640195)
+script = ExtResource("4_1bvp3")
+upper_arm_speed = null
 
 [editable path="test"]
+[editable path="Charakter_Benjamin_Ruf"]
